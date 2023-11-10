@@ -1,36 +1,45 @@
-<h3>Angular 17 adds a new template syntax for adding control flow statements in your Angular templates without using *ngIf, *ngFor or *ngSwitch.</h3>
+<div class="container">
+  <p>
+    Angular 17 adds a new template syntax for adding control flow statements in your Angular templates without using
+    *ngIf, *ngFor or *ngSwitch.
+  </p>
+  <br><br><br>
 
-<h1>If Statements </h1>
-<!-- if conditions control flow -->
-@if (loggedIn) {
-<p> Rendered conditionally! </p>
-} @else {
- <p>The user is not logged in </p>
-}
+  <h1>If Statement </h1>
+  <!-- if conditions control flow -->
+  @if (loggedIn) {
+  <p> Rendered conditionally! </p>
+  } @else {
+  <p>The user is not logged in </p>
+  }
+  <br><br>
 
+  <h1>Switch statement </h1>
+  <!--  switch statement control flow -->
+  @switch (source) {
+  @case ("google") {
+  <p>Thanks for finding us on Google</p>
+  }
 
-<h1>Switch statement </h1>
-<!--  switch statement control flow -->
-@switch (source) {
-@case ("google") {
-<p>Thanks for finding us on Google</p>
-}
+  @case ("youtube") {
+  <p>Thanks for following us on YouTube</p>
+  }
 
-@case ("youtube") {
-<p>Thanks for following us on YouTube</p>
-}
+  @default {
+  <p>Maybe we'll meet in the future</p>
+  }
+  }
+  <br><br>
 
-@default {
-<p>Maybe we'll meet in the future</p>
-}
-}
+  <h1>Loop  </h1>
+  <br>
+  @for (item of items; track item.id) {
 
-<h1>Rendered For Loop </h1>
-@for (item of items; track item.id) {
-
-{{ item.name }}
-
+ <h3>Framework name:  {{ item.name }}</h3>
+<br>
   }@empty{
-<p>Hello world</p>
-}
+  <p>Hello world</p>
+  }
+</div>
+
 
