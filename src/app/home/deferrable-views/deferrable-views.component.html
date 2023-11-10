@@ -1,0 +1,29 @@
+<p>
+  Lazy loading just got (way!) easier!
+  <br><br>
+  Instead of being limited to lazy-loading on route-level or fiddling around with complex APIs for achieving more granular lazy loading, Angular 17 now offers another new template syntax: &#64;defer.
+
+<br><br>
+  &#64;defer can be used in conjunction with different triggers (viewport visibility, interaction, on hover & more) to lazily load some part of a template.
+</p>
+<div class="main-container" #angular14>
+
+  @defer(on viewport(angular14)){
+      <app-angular-14></app-angular-14>
+  }
+
+</div>
+
+
+<div class="main-container" #angular15>
+  @defer(on viewport(angular15)){
+  <app-angular-15 ></app-angular-15>
+  }
+</div>
+
+
+<div class="main-container" #angular16>
+  @defer(on viewport (angular16)){
+  <app-angular-16></app-angular-16>
+  }
+</div>
